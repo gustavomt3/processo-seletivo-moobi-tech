@@ -1,0 +1,60 @@
+.container-geral__beneficios{
+ padding: 20px 0 20px 0;
+ background-color: #f6fbf7;
+ border-top: 2px solid #e5e5e5;
+ border-bottom: 2px solid #e5e5e5;
+ @include mobile-m{
+  padding: 40px 0 40px 0;
+ }
+ .container-beneficios__beneficios{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  @include tablet{
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+  }
+  div{
+   &:last-child{
+    margin-bottom: 0;;
+   }
+  }
+  .beneficios{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   margin-bottom: 25px;
+   @include tablet{
+    min-width: 300px;
+   }
+   @include laptop{
+    min-width: unset;
+    margin-bottom: 0;
+   }
+   .icon-ouvidoria{
+    width: 43.8px;
+    height: 47px;
+   }
+   .icon-doctor{
+    width: 33.6px;
+    height: 47px;
+   }
+   img{
+    width: 100%;
+    height: 47px;
+    margin-bottom: 14px;
+   }
+   h1{
+    @include subtitle;
+    margin-bottom: 12px;
+    letter-spacing: -2px;
+   }
+   p{
+    @include text;
+   }
+  }
+ }
+}

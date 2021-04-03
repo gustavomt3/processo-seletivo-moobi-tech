@@ -1,0 +1,58 @@
+.container-geral__localizacao{
+ padding: 19px 0 19px 0;
+ background-color: #057433;
+ .container-localizacao{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include laptop{
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+  }
+ }
+ .container-maps{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  @include laptop{
+   max-width: 580px;
+   flex-direction: row;
+   margin-bottom: 0;
+   align-items: center;
+  }
+ }
+}
+
+.mapa{
+ margin-bottom: 15px;
+ @include laptop{
+  min-width: 165px;
+  min-height: 91px;
+  margin-bottom: 0;
+  margin-right: 25px;
+ }
+}
+.texts-localizacao{
+ p{
+  font-size: 0.875rem;
+  color: $secondColor;
+  &:first-child{
+   margin-bottom: 20px;
+  }
+  &:last-child{
+   font-weight: 700;
+  }
+ }
+}
+.container-redessociais{
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+ img{
+  height: 21px;
+  &:first-child{
+   margin-right: 20px;
+  }
+ }
+}

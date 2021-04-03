@@ -1,0 +1,121 @@
+// Mixins MediaQuery
+@mixin mobile-s {
+ @media (min-width: 320px) {
+   @content;
+ }
+}
+
+@mixin mobile-m {
+ @media only screen and(min-width: 375px){
+   @content;
+ }
+}
+
+@mixin mobile-l {
+ @media only screen and(min-width: 425px){
+   @content;
+ }
+}
+
+@mixin tablet {
+ @media only screen and (min-width: 768px) {
+   @content;
+ }
+}
+
+@mixin laptop {
+ @media only screen and (min-width: 1024px) {
+   @content;
+ }
+}
+
+@mixin laptop-l {
+ @media only screen and (min-width: 1440px) {
+   @content;
+ }
+}
+
+@mixin desktop {
+ @media only screen and (min-width: 1600px) {
+   @content;
+ }
+}
+
+//Mixins Fontes
+@mixin font-menu {
+ font-size: 1.2rem;
+ font-weight: 500;
+ @include tablet{
+   font-size: 1.6rem;
+ }
+ @include laptop{
+   font-size: 0.75rem;
+ }
+ @include laptop-l{
+   font-size: 0.9375rem;
+ }
+}
+
+@mixin title {
+ font-size: 1.875rem;
+ font-weight: 500;
+ color: $primaryColor;
+}
+
+@mixin subtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: $primaryColor;
+ }
+
+@mixin subtitle-1 {
+font-size: 0.9375rem;
+font-weight: 500;
+color: $primaryColor;
+}
+
+@mixin text {
+font-size: 0.75rem;
+color: $fourthColor;
+}
+
+
+// Containers e Flex
+.container{
+ margin: 0 auto;
+ @include mobile-s{
+   max-width: 280px;
+ }
+ @include mobile-m{
+   max-width: 321px;
+ }
+ @include mobile-l{
+   max-width: 340px;
+ }
+ @include tablet{
+   max-width: 654px;
+ }
+ @include laptop{
+   max-width: 868px;
+ }
+ @include laptop-l{
+   max-width: 1140px;
+ }
+}
+
+
+// Colors
+$primaryColor: #145c2a;
+$secondColor: #fff;
+$thirdColor: #129238;
+$fourthColor: #000000;
+
+
+// Fonts
+/* Legenda: 100 = Light / 400 = Regular / 500 = Medium / 700 = Bold / 800 = Extra Bold */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap');
+
+$primaryFont: 'Montserrat', sans-serif;
+
+
+

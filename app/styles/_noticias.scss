@@ -1,0 +1,77 @@
+.container-geral__noticias{
+ display: flex;
+ flex-direction: column;
+ padding: 20px 0 20px 0;
+ @include laptop{
+  padding: 22px 0 41px 0;
+ }
+ .container__noticias-vertudo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  h1{
+   @include title;
+  }
+  a{
+   font-size: 0.75rem;
+   color: $secondColor;
+   background-color: $thirdColor;
+   border-radius: 50px;
+   padding: 5px 10px 5px 10px;
+  }
+ }
+ .container__posts{
+  display: flex;
+  flex-direction: column;
+  @include laptop{
+   flex-direction: row;
+   justify-content: space-between;
+  }
+  div{
+   &:last-child{
+    margin-bottom: 0;;
+   }
+   &:nth-child(+n+3){
+    display: none;
+    @include laptop{
+     display: block;
+    }
+   }
+  }
+  .post{
+   margin-bottom: 15px;
+   @include laptop{
+    width: 200px;
+   }
+   @include laptop-l{
+    width: 263px;
+   }
+   img{
+    border-radius: 8px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    @include tablet{
+     height: 300px
+    }
+    @include laptop{
+     width: 200px;
+     height: 130px;
+    }
+    @include laptop{
+     width: 263px;
+     height: 168px
+    }
+   }
+   p{
+    @include text;
+    margin-bottom: 9px;
+   }
+   h1{
+    @include subtitle-1;
+   }
+  }
+ }
+}

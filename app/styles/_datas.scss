@@ -1,0 +1,99 @@
+.container-geral__datas{
+ position: relative;
+ background-color: $primaryColor;
+ padding: 31px 0 31px 0;
+ &::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: $secondColor;
+  left: 0;
+  bottom: 0;
+ }
+ .container-datas{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  @include laptop{
+   flex-direction: row;
+  }
+  .logo-contato{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 35px;
+   @include laptop{
+    align-items: flex-start;
+    margin-bottom: 0;
+    margin-right: 32px;
+   }
+   @include laptop-l{
+    align-items: center;
+    flex-direction: row;
+    margin-right: 0;
+   }
+   img{
+    max-width: 195px;
+    margin-bottom: 20px;
+    @include laptop{
+     margin-right: 30px;
+     margin-bottom: 0;
+    }
+   }
+   p{
+    text-align: center;
+    color: $secondColor;
+    font-size: 0.875rem;
+    @include laptop{
+     text-align: left;
+    }
+   }
+  }
+  .datas{
+   display: flex;
+   flex-direction: column;
+   @include laptop{
+    flex-direction: row;
+   }
+   @include laptop-l{
+    max-width: 539px;
+   }
+   .data{
+    display: flex;
+    align-items: center;
+    p{
+     font-size: 0.9375rem;
+     font-weight: 700;
+     color: $secondColor;
+    }
+    &:first-child{
+     margin-bottom: 15px;
+     @include laptop{
+      margin-bottom: 0;
+     }
+    }
+    .cubo{
+     text-align: center;
+     min-width: 68px;
+     padding: 7.55px 0 7.55px 0;
+     background-color: $secondColor;
+     border-radius: 8px;
+     margin-right: 15px;
+     h1{
+      display: flex;
+      flex-direction: column;
+      font-size: 1.875rem;
+      font-weight: 700;
+      text-align: center;
+     }
+     span{
+      font-size: 0.75rem;
+      font-weight: 400;
+     }
+    }
+   }
+  }
+ }
+}

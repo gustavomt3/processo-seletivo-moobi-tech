@@ -1,0 +1,36 @@
+.container-geral__campanhas-unimed{
+ display: flex;
+ flex-direction: column;
+ padding: 40px 0 40px 0;
+ @include laptop{
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 0 94px 0;
+ }
+ h1{
+  @include title;
+  margin-bottom: 21px;
+ }
+ img{
+  width: 100%;
+  border-radius: 8px;
+ }
+ .container-campanhas{
+  margin-bottom: 25px;
+  @include laptop{
+   max-width: 400px;
+   margin-bottom: 0;
+  }
+  @include laptop-l{
+   max-width: 555px;
+  }
+ }
+ .container-unimed{
+  @include laptop{
+   max-width: 400px;
+  }
+  @include laptop-l{
+   max-width: 555px;
+  }
+ }
+}
